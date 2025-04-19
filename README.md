@@ -19,3 +19,8 @@ npm run dev
 - **build**: Builds the application for production. 
 - **lint**: Runs ESLint. 
 - **preview**: Previews the production build locally.
+
+
+## Design
+
+https://www.figma.com/design/ywviP09QuivjVRk1MOERqN/Final-UI---Design-System---UI-Kit--free-version---Community-?node-id=1-23&t=eVyuK0vXPDFBqrUR-1
