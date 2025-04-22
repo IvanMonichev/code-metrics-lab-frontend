@@ -18,7 +18,7 @@ const Header: FC<PropsWithChildren<HeaderProps>> = ({ children, title }) => {
   return (
     <header className={styles.header}>
       {title && (
-        <Typography.Title className={styles.title}>{title}</Typography.Title>
+        <Typography.Title className={styles.title}>{title}s</Typography.Title>
       )}
       {children}
     </header>
