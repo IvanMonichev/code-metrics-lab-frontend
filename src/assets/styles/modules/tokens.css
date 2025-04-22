@@ -1,0 +1,8 @@
+:root {
+  --bg-base: #fff;
+  --bg-accent: #F6F7F9;
+  --border-default: 1px solid #DCE0E5;
+
+  --space-md: 20px;
+  --space-xs: 8px;
+}

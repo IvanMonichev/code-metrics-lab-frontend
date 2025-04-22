@@ -1,0 +1,32 @@
+.main {
+  display: grid;
+  grid-template-areas:
+    "left-bar header"
+    "left-bar content";
+  height: 100vh;
+  grid-template-rows: 64px 1fr;
+  grid-template-columns: 240px 1fr;
+}
+
+.content {
+  grid-area: content;
+}
+
+.header {
+  grid-area: header;
+  border-bottom: var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-md);
+}
+
+.left-bar {
+  grid-area: left-bar;
+  background-color: var(--bg-accent);
+  border-right: var(--border-default);
+}
+
+.title {
+  margin: 0;
+}

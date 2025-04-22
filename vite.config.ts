@@ -1,7 +1,8 @@
 import react from '@vitejs/plugin-react'
+import path from 'node:path'
+import process from 'node:process'
 import { defineConfig } from 'vite'
 import { version } from './package.json'
-import process from 'node:process'
 
 export default defineConfig({
   plugins: [react()],
@@ -13,12 +14,12 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': 'src'
+      '@': path.resolve(__dirname, 'src')
     }
   },
   css: {
     modules: {
       localsConvention: 'camelCase'
     }
-  },
+  }
 })
