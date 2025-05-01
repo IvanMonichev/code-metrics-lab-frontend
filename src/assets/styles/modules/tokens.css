@@ -1,8 +1,14 @@
 :root {
-  --bg-base: #fff;
-  --bg-accent: #F6F7F9;
-  --border-default: 1px solid #DCE0E5;
+  --primary-color: #B70404;
 
+  --bg-base: #f4f4f4;
+  --bg-main: #fff;
+  --border-default: 1px solid #808080;
   --space-md: 20px;
   --space-xs: 8px;
+
+  --inner-pd: 8px;
+  --inner-gap: 8px;
+
+  --outer-br: 0px;
 }

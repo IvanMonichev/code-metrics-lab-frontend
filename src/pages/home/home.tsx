@@ -1,15 +1,14 @@
-import Layout from '@/shared/core/layout'
+import Page from '@/shared/layouts/page/page'
+import Panel from '@/shared/layouts/panel/panel'
+import ToolBar from '@/shared/widgets/tool-bar/tool-bar'
+import TopBar from '@/shared/widgets/top-bar/top-bar'
 import {
   AppstoreOutlined,
-  BellOutlined,
   InboxOutlined,
   MailOutlined,
-  SettingOutlined,
-  UploadOutlined,
-  UserOutlined
+  SettingOutlined
 } from '@ant-design/icons'
-import { Avatar, Button, Flex, Menu, MenuProps, Upload } from 'antd'
-import Search from 'antd/es/input/Search'
+import { Menu, MenuProps, Upload } from 'antd'
 import type { FC } from 'react'
 
 type MenuItem = Required<MenuProps>['items'][number]
@@ -37,50 +36,35 @@ const items: MenuItem[] = [
     ]
   }
 ]
-const { LeftBar, Header, Page, Content } = Layout
+const { LeftBar, Header, Content } = Page
 
 const Home: FC = () => {
   return (
     <Page>
-      <Header title='Заголвок страницы'>
-        <Flex gap={8}>
-          <Search placeholder='Поиск' enterButton />
-          <Button type='primary' icon={<UploadOutlined />}>
-            Загрузка
-          </Button>
-          <Button
-            style={{ width: 50 }}
-            type='default'
-            icon={<BellOutlined />}
-          ></Button>
-          <Avatar style={{ width: 50 }} icon={<UserOutlined />} />
-        </Flex>
+      <Header>
+        <TopBar />
+        <ToolBar />
       </Header>
       <LeftBar>
-        <Flex gap={20} vertical={true}>
-          <div style={{ height: 65 }}></div>
-          <Menu mode='vertical' items={items} />
-        </Flex>
+        <Menu mode='vertical' items={items} />
       </LeftBar>
       <Content>
-        <Flex
-          align='center'
-          style={{ width: '100%', height: '100%' }}
-          justify='center'
-        >
-          <Upload.Dragger
-            name='file'
-            multiple={true}
-            style={{ width: '500px', height: '450px' }}
-          >
-            <p className='ant-upload-drag-icon'>
-              <InboxOutlined />
-            </p>
-            <p className='ant-upload-text'>
-              Нажмите или перетащите файл в эту область, чтобы загрузить
-            </p>
-          </Upload.Dragger>
-        </Flex>
+        <Panel.Container>
+          <Panel title={'Загрузка файла'}>
+            <Upload.Dragger
+              name='file'
+              multiple={true}
+              style={{ width: '500px', height: '450px' }}
+            >
+              <p className='ant-upload-drag-icon'>
+                <InboxOutlined />
+              </p>
+              <p className='ant-upload-text'>
+                Нажмите или перетащите файл в эту область, чтобы загрузить
+              </p>
+            </Upload.Dragger>
+          </Panel>
+        </Panel.Container>
       </Content>
     </Page>
   )

@@ -1,0 +1,7 @@
+.tool-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--inner-pd);
+  height: 50%;
+  gap: var(--inner-gap);
+}

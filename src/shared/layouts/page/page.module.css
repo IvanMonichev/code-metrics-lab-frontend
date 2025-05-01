@@ -1,30 +1,30 @@
 .main {
   display: grid;
   grid-template-areas:
-    "left-bar header"
+    "header header"
     "left-bar content";
   height: 100vh;
-  grid-template-rows: 64px 1fr;
-  grid-template-columns: 240px 1fr;
+  grid-template-rows: 78px 1fr;
+  grid-template-columns: 350px 1fr;
+  background-color: var(--bg-base);
 }
 
 .content {
   grid-area: content;
+  padding: 16px;
 }
 
 .header {
   grid-area: header;
   border-bottom: var(--border-default);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 var(--space-md);
+  background-color: var(--bg-main);
 }
 
 .left-bar {
   grid-area: left-bar;
-  background-color: var(--bg-accent);
+  background-color: var(--bg-main);
   border-right: var(--border-default);
+  padding: var(--inner-pd);
 }
 
 .title {
