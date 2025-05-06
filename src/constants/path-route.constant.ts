@@ -1,3 +1,4 @@
 export const PathRoute = {
-  Home: '/'
+  Home: '/',
+  Experiment: '/experiment'
 } as const
