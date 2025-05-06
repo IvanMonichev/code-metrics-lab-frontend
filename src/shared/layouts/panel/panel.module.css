@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--inner-gap);
+  border: var(--border-default);
+  padding: var(--inner-pd);
+  background-color: var(--bg-main);
+  border-radius: var(--outer-br);
+}
+
+.panel-header {
+  display: flex;
+}
+
+.panel-title {
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+}
